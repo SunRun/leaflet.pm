@@ -55,7 +55,7 @@ const SnapMixin = {
   },
   _handleSnapping(e) {
     // if snapping is disabled via holding ALT during drag, stop right here
-    if (e.originalEvent.altKey) {
+    if (e.originalEvent.altKey || e.originalEvent.shiftKey) {
       return false;
     }
 
